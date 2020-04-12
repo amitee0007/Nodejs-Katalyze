@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+    head
+        title Add new Posts
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        link(rel='stylesheet' href='/style/admin.css')
+    body
+        include admin_nav
+        h3 New Student Resitration
+        if errors
+            each error, i in errors
+                div.alert.alert-danger #{error.msg}
+        form.form_container(method='post' action='/admin/newstudent' enctype="multipart/form-data")
+            .form-group
+                label First Name:
+                input.form-control(name='first_name' type='text')
+            .form-group
+                label Last Name:
+                input.form-control(name='last_name' type='text')
+            .form-group
+                label age:
+                input.form-control(name='age' type='number')
+            .form-group
+                label Image:
+                input.form-control(name='photo' type='file')
+            input.btn.btn-default.form-control(name='submit' type='submit' value='Add DATA')
+
+

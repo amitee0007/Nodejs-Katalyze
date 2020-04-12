@@ -1,0 +1,262 @@
+include head_part
+
+body(data-spy='scroll' data-target='#myScrollspy' data-offset='15')
+    include nav_part
+    #myScrollspy.list_container
+        ul.nav.nav-pills(data-spy='affix')
+            li
+                a(href='#section1') Newsletter
+            li
+                a(href='#section2') Sentences
+            li
+                a(href='#section3') Stories
+            li
+                a(href='#section4') Videos &<br>Podcast
+            li
+                a(href='#section5') Contact Us
+        #section1
+        //- --------------------------------Newsletter---------------------------------------------
+        .newsletter
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators.newsletter_indicater
+                    li.active(data-target='#carouselExampleIndicators' data-slide-to='0')
+                    -for(let i=1;i<(news_data.length-1)/2;i++)
+                        li(data-target='#carouselExampleIndicators' data-slide-to=i)
+
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block(src=news_data[0].image)
+                        hr
+                        img.d-block(src=news_data[1].image)
+                    -for(let x=2;x<news_data.length-1;x=x+2)
+                        .carousel-item
+                            img.d-block(src=news_data[x].image)
+                            hr
+                            img.d-block(src=news_data[x+1].image) 
+                a.carousel-control-prev(href='#carouselExampleIndicators' role='button' data-slide='prev')
+                    span.carousel-control-prev-icon
+                        span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleIndicators' role='button' data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+            .newscontainer
+                button
+                    i.fas.fa-chevron-left
+                button.months(onclick='') Current Month
+                button.months(onclick='') August
+                button.months(onclick='') July
+                button.months(onclick='') June
+                button.months(onclick='') May
+                button.last
+                    i.fas.fa-chevron-right
+
+        #section2
+        //- ----------------------------SENTENCES & DESCREPTION----------------------------------
+        sentence_section
+            img.yellow_owl(src='/images/orange_owl.svg')
+            button.back_(onclick="back_slide()")
+                i.fas.fa-chevron-up
+            .main
+                .s_d
+                    //- .s_d_1#sd_last
+                    //-     .user_picture      
+                    //-         img.image(src=input[14].photo)
+                    //-     .sentence_part
+                    //-         .info_month
+                    //-             h2 #{input[14].First_Name} #{input[14].Last_Name}
+                    //-             h2.age |age : #{input[14].age}|
+                    //-             h2 #{input[14].date_time}
+                    //-         .sentence                                        
+                    //-             h3 !{input[14].post}...
+                    //-                 a(href="/details/"+input[14].First_Name)
+                    //-                     i.medium.material-icons.more_button more 
+
+                    //- .s_d_2#sd_last
+                    //-     .sentence_part
+                    //-         .info_month_
+                    //-             h2 #{input[15].First_Name} #{input[15].Last_Name}
+                    //-             h2.age |age : #{input[15].age}|
+                    //-             h2 #{input[15].date_time}
+                    //-         .sentence_
+                    //-             h3 !{input[15].post}....
+                    //-                 a(href="/details/"+input[15].First_Name) 
+                    //-                     i.medium.material-icons.more_button more                                
+                    //-     .user_picture
+                    //-         img.image(src=input[15].photo)
+                    -for(let i=0;i<input.length;i=i+2)
+                        -if(input[i])
+                            .s_d_1
+                                .user_picture      
+                                    img.image(src='/images/student_pic/'+input[i].photo)
+                                .sentence_part
+                                    .sentence   
+                                        .info_month
+                                            h2 #{input[i].first_name} #{input[i].last_name} , Age : #{input[i].age}
+                                        h3.date_of_post #{input[i].date_of_post}                                   
+                                        h3.text_to_post !{input[i].text_to_post}
+                            button.read.more_1(onclick="read_more_1()") Read Full
+                        -if(input[i+1])                                                                                                                             
+                            .s_d_2
+                                .sentence_part
+
+                                    .sentence_
+                                        .info_month_
+                                            h2 #{input[i+1].first_name} #{input[i+1].last_name}, Age : #{input[i+1].age}
+                                        h3.date_of_post_ #{input[i].date_of_post}                                
+                                        h3.text_to_post !{input[i+1].text_to_post}
+                                .user_picture
+                                    img.image(src='/images/student_pic/'+input[i+1].photo) 
+
+                            button.read.more_2(onclick="read_more()_2") Read Full
+
+
+                    //- .s_d_1#sd_first
+                    //-     .user_picture      
+                    //-         img.image(src=input[0].photo)
+                    //-     .sentence_part
+                    //-         .info_month
+                    //-             h2 #{input[0].First_Name} #{input[0].Last_Name}
+                    //-             h2.age |age : #{input[0].age}|
+                    //-             h2 #{input[0].date_time}
+                    //-         .sentence                                        
+                    //-             h3 !{input[0].post}...
+                    //-                 a(href="/details/"+input[0].First_Name) 
+                    //-                     i.more_button VIEW MORE 
+                    //-                     //- i.medium.material-icons.more_button more 
+
+                    //- .s_d_2#sd_first
+                    //-     .sentence_part
+                    //-         .info_month_
+                    //-             h2 #{input[1].First_Name} #{input[1].Last_Name}
+                    //-             h2.age |age : #{input[1].age}|
+                    //-             h2 #{input[1].date_time}
+                    //-         .sentence_
+                    //-             h3 !{input[1].post}....
+                    //-                 a(href="/details/"+input[1].First_Name) 
+                    //-                     i.medium.material-icons.more_button more                                
+                    //-     .user_picture
+                    //-         img.image(src=input[1].photo)  
+
+            button.next_(onclick="next_slide()")
+                i.fas.fa-chevron-down
+            script.
+                let back_btn = document.querySelector('.back_');
+                let next_btn = document.querySelector('.next_');
+
+                const main = document.querySelector('.main');
+                const s_d = document.querySelector('.s_d');
+                let all_sd = document.querySelectorAll('.s_d .s_d_1,.s_d_2');
+
+                let i =1;
+                let size = main.clientHeight;
+                s_d.style.transform = 'translatey('+(-size*i) + 'px)';
+
+                next_slide = ()=>{
+                    if(i>(all_sd.length/2)-2) return;
+                    s_d.style.transition = 'transform 1s ease-in-out';
+                    i++;
+                    s_d.style.transform = 'translatey('+(-size*i) + 'px)';
+                    console.log(i);
+
+                };
+                back_slide = ()=>{
+                    if(i<1) return;
+                    s_d.style.transition = 'transform 1s ease-in-out';
+                    i--;
+                    s_d.style.transform = 'translatey('+(-size*i) + 'px)';
+                };
+                main.addEventListener('transitionend',()=>{
+                if(all_sd[i].id === 'sd_last'){
+                    s_d.style.transition = 'none';
+                    i=(all_sd.length-2)/2;
+                    s_d.style.transform = 'translatey('+(-size*i) + 'px)';                    
+                }
+                if(all_sd[i].id === 'sd_first'){
+                    s_d.style.transition = 'none';
+                    i=(all_sd.length/2)-i;
+                    s_d.style.transform = 'translatey('+(-size*i) + 'px)';                    
+                }
+                });
+
+                //- let duration = setInterval(timer ,2000);        
+                //- function timer(){
+                //-     if(i<10){
+                //-     s_d.style.transition = 'transform 1s ease-in-out';
+                //-     s_d.style.transform = 'translatey('+(-size*i) + 'px)';
+                //-     i++;}        
+                //-   }
+            script(src='/bootstrap-4.0.0/dist/js/bootstrap.min.js') 
+        #section3
+        //-----------------------------------Stories--------------------------------
+        .tails
+            img.story_owl(src='/images/pink_owl.svg')
+            #flipbook
+                .hard
+                    .click_here
+                        h1 CLICK HERE TO READ
+                    .title_page
+                        img.title_name(src='/images/logo.png')
+                        hr
+                        hr
+                        h1.book_title Stories
+                        h3.book_about 30 Secondes Tails
+                        img.title_image(src='/images/title_image.jpg')
+
+                each details in flip_data
+                    .left_page
+                        .style_frame
+                            img.flip_image(src='/images/student_pic/'+details.photo)
+                            h2.flip_name #{details.first_name} #{details.last_name}
+                            h2 age : #{details.age}
+                    .right_page
+                        h2.story_title !{details.post_title}
+                        h3.story !{details.text_to_post}
+                        //- h3 #{details.story_date_time}
+                else
+                    h2 No Tails avilble
+                .hard
+                .hard
+            button.stop_ stop
+            button.start_ start
+            script(type='text/javascript').
+                $("#flipbook").turn({
+                width: 1100,
+                height: 550,
+                autoCenter: true,
+                elevation:200,
+                duration:2500
+                });
+
+                var way = 1;
+                setInterval(function() {                    
+                    if (way==1) {                        
+                        $("#flipbook").turn("next");                        
+                        if ($("#flipbook").turn("page")== $("#flipbook").turn("pages")) {
+                            way = 2;
+                            $("#flipbook").turn("options", {turnCorners: "tl.tr"});                            
+                        }                        
+                    } else {                        
+                        $("#flipbook").turn("previous");                        
+                            if ($("#flipbook").turn("page")==1) {
+                                way = 1;
+                                $("#flipbook").turn("options", {turnCorners: "bl,br"});                            
+                        }
+                    }                    
+                }, 4000);             
+
+
+        img.story_owl(src='/images/yellow_owl.svg')
+
+    //---YOUTUBE VIDEO PART---
+    #section4
+        .youtube_videos
+            .video_1
+                iframe(width='560' height='315' src='https://www.youtube.com/embed/0pNYUuylevg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+            .video_2
+                iframe(width='560' height='315' src='https://www.youtube.com/embed/t_k5KuqP1B0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+            .video_3
+                iframe(width='560' height='315' src='https://www.youtube.com/embed/g_R-V3mGhbg' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+    #section5
+        footer
+            include footer
+

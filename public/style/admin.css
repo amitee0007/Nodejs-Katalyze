@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+}
+.form_container{
+    border: 1px solid grey;
+    padding: 2.5%;
+}
+.form-group{
+    margin: 2%;
+}
+.form-control{
+    height: 3vw;
+    width: 20vw!important;
+    font-size: 1.5vw;
+}
+.title{
+    font-size: 1.5vw;
+}
+
+.text_editor{
+    height: 100vw;
+}
+.search_data{
+    display: none;
+}
+
+/* --------------------------------ADMIN NAV PART--------------------------*/
+.nav{
+    display: flex;
+    background-color: cornflowerblue
+}
+.nav a{
+    display: block;
+    background-color: whitesmoke;
+    margin: 0% 5%;
+    padding: 1% 2%;
+    border-radius: 30% 30% 30% 30%;
+}
+
+/*--------------------------------ADMIN addpost page---------------------------*/
+
+.selected_image{
+    width: 10vw;
+    height: 12.5vw;
+    margin-left: 10vw;
+}
+.selected_student{
+    width: 100%;
+    background-color: rgb(173, 194, 235);
+}
+.id_selected{
+    width:5vw;
+}
+.container{
+    margin-left: 30%!important;
+}
+.search{
+    font-size: 2vw;
+    width: 20%;
+}
+.search_name{
+    font-size: 1.5vw;
+}
+.search_result_box{
+    margin: 1vw 2vw 0 0;
+    display: block;
+}
+.search_result{
+    float: left!important;
+}
+
+/*-----------ADD PAGE--------------*/
+.save_btn{
+     margin:5vw 0 5vw 35vw;
+}
+.date_input{
+    margin-left: 30vw;
+}
+.post_date{
+    margin-left: 22vw;
+}
+.category_input{
+    margin-left: 12.5vw;
+}

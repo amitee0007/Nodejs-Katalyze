@@ -1,0 +1,16 @@
+extends flightsoffancy
+
+block sentence
+    a.details_back(href='/flightsoffancy') Go Back
+    .details_container
+        .details_user_info
+            .details_picture
+                img.details_pic(src=input.photo)
+            .details_info
+                h2 #{input.First_Name} #{input.Last_Name}
+                h3 Age : #{input.age}
+        .details_comp_text
+            .details_date
+                h3 #{input.date_time}
+            .details_text_area
+                h4 !{input.post}

@@ -1,0 +1,584 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+/*-------------------------- ABOUT FLIGHTS OF FANCY PART -------------------------------*/
+.flight_about{
+    padding-top: 2%;
+    background-image: url('/images/flights.svg');
+    background-size: 50%;
+    background-position: 30% 20%;
+    /* background-repeat: no-repeat; */
+    background-color: rgba(50, 172, 172, 0.541);
+    width: 100%;
+    height: 20vw;
+    /* filter: blur(5px); */
+    position: relative;
+
+}
+.flight_about:hover{
+    background-color: rgba(0, 0, 0, 0.493);
+    filter: blur(0px);
+    transition: .4s;
+    color:white;
+}
+
+.heading_flight{
+    color:black;
+    font-size: 5vw;
+    font-family: 'Charm';
+    text-align: center;
+    color:white;
+    position: absolute;
+    top: 18%;
+    right:35%;  
+    font-weight: 800;  
+
+
+}
+.yellow_owl{
+    width: 100px;
+    margin-left: 1150px;
+}
+ /*--------------------------------NAVBAR PART-------------------------------------*/
+.open_navbar{
+    padding: 0.6%;
+    border-radius: 50%;
+    background-color:rgba(49, 47, 44, 0.096);
+    position: fixed;
+    top: 1.5%;
+    right: 0.5%;
+    z-index: 10;
+    }
+.contact_button{
+    font-size: 430%!important;
+    position: fixed;
+    top: 12%;
+    right: 0.5%;
+    z-index: 10;
+    color: rgba(49, 47, 44, 0.096);
+}
+.nav_close{
+    position: fixed;
+    top: 1.5%;
+    right: 0.5%;
+    z-index: 15;
+    font-size: 450%!important;
+    color:rgba(49, 47, 44, 0.096) ;
+}
+.navbar_container{
+    position: fixed;
+    top : 0%;
+    right: 0%;
+    background:url(/images/nav_background.svg);
+    z-index: 10;  
+    display: none;
+    background-size:50%;
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 27%;
+    background-position:right bottom;
+    box-shadow: 5px 5px 5px 5px black;
+
+}
+.navbar_list{
+    float: left;
+    margin-left: 7%;
+}
+.navbar_list hr{
+    box-shadow: 2px 2px 2px 2px black;
+}
+.navbar_list a{
+    display: block;
+    font-size: 2vw;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    color:black;
+
+}
+
+.navbar_list a:hover{
+    text-decoration: none;
+    transform: translateX(-3px);
+    color: #000;
+    font-weight: 600;
+    transition: .25s;
+    text-shadow:1px 1px 1px #666;
+
+}
+.program{
+    margin-left: 5vw!important;
+    font-size: 1.5vw!important;
+    
+
+}
+
+/* ------------------------------SCOLLSPY SIDE LIST ----------------------------*/
+
+.nav{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    float: left!important;
+    width: 8%!important;
+    height: 100%;
+    background-color: rgba(7, 7, 7, 0.021);
+    padding: 10% 0%;
+}
+.nav li{
+    display: block!important;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.nav a{
+    color:rgba(8, 8, 8, 0.219) ;
+    font-size: 1.5vw;
+    font-weight: 400;
+    text-align: center;
+    padding: 5% 0px!important;
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+       color: rgba(6, 98, 236, 0.507) !important;
+       background-color: unset;
+       font-size: 1.5vw;
+       transition: ease-in-out .5s;
+       font-weight: 700;
+}
+
+
+.nav-pills>li>a:hover{
+    background-color: unset!important;
+}
+
+
+/* ------------------------------------------NEWSLETTER PART-----------------------------------------*/
+.newsletter{
+    width: 100%;
+    background: url(/images/purple_owl.svg);
+    background-position: left top;
+    background-size: 7vw;
+    background-blend-mode: saturation;
+    background-repeat: no-repeat;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    position: relative;
+}
+
+.newsletter_indicater{
+    background-color: rgba(0, 0, 0, 0.336);
+    margin-left: 20%!important;
+    padding: 1%;
+    border-radius: 50%;
+}
+
+/* --------------------------Bootsrap part------------ */
+.carousel{
+    width: 90%;
+    margin-left: 8.5%;
+}
+.d-block{
+    width: 49.5%!important;
+}
+hr{
+    width: 1%;
+}
+
+.active{
+    display: flex!important;
+}
+
+.carousel-control-prev-icon{
+    height: 30%!important;
+    width: 40%;
+}
+.carousel-control-next-icon{
+    height: 30%!important;
+    width: 40%;
+}
+
+/*  NEWSLETTER MORE PART-----------*/
+
+.newscontainer{
+    margin-left: 8.5%;
+    width: 90%;
+    background-color: rgba(169, 169, 169, 0.247);
+}
+
+.newscontainer button{
+    padding: .3% .7%;
+    font-size: 1.2vw;
+    background-color: white;
+}
+.newscontainer .months{
+    margin: 0 1%;
+}
+.newscontainer .last{
+    position: absolute;
+    right: 1.5%;
+}
+
+/*------------------------------Sentances and Discription PART---------------------------*/
+.sentence_section{
+    margin-left: 8.5%;
+    width: 100%;
+    background: url(/images/red_owl.svg);
+    background-position: left;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.main{
+    margin-left: 13.5%;
+    width: 78%;
+    height: 49.5vw;
+    overflow: hidden;
+    margin-right:8.5% ;
+}
+.s_d{
+    height: 100%;
+    width: 100%;
+}
+
+.s_d_1,.s_d_2{
+    display: flex;
+    margin: 7vw 0;
+}
+
+.user_picture{
+    width: 11.2VW;
+    height: 17vw; 
+
+
+}
+
+.image{
+    width: 11.2vw;
+    height: 15.1vw;
+    align-items: center;
+    overflow: hidden;
+    background: url(/images/pic_frame.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: .8vw .6vw .8vw .6vw;
+}
+.sentence_part{
+    width: 80%;
+    height: 17vw;
+}
+.info_month{
+    color:  rgba(6, 98, 236, 0.849);
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.info_month_{
+    color:  rgba(6, 98, 236, 0.849);
+    text-align: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sentence{
+    height: 15vw;
+    margin-left: 2vw;
+}
+.sentence_{
+    height: 15vw;
+    margin-right: 2vw;
+}
+.sentence h3{
+    text-align: center;
+    margin: auto;
+
+}
+.sentence_ h3{
+    text-align: center;
+    margin: auto;
+}
+.text_to_post{
+    height: 15vw;
+    font-weight: 100!important;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.date_of_post{
+    margin-top: 1vw;
+    text-align: left!important;
+    font-family: charm;
+    color:  rgba(6, 98, 236, 0.849);
+}
+.date_of_post_{
+    margin-top: 1vw;
+    text-align: right!important;
+    font-family: charm;
+    color:  rgba(6, 98, 236, 0.849);
+}
+.read{
+    margin-left: 50%;
+    display: none;
+}
+
+.back_{
+    margin-left: 50%;
+    padding: 1% 2%;
+    /* position: absolute;
+    top:90%;
+    left: -35%; */
+    background-color: unset;
+    color: #1E88E5;
+    border: unset;
+    font-size: 3vw;
+    font-weight: bolder;
+}
+.next_{
+    padding: 1% 2%;
+    margin-left: 50%;
+    /* position: absolute;
+    top:50%;
+    right: 85%; */
+    background-color: unset;
+    color: #1E88E5;
+    border: unset;
+    font-size: 3vw;
+    font-weight: bolder;
+    z-index: 1000;
+}
+.next_:active,.next_:hover,.next_:visited,.back_:active,.back_:hover,.back_:visited{
+    outline: unset;
+    color: #666;
+}
+/*------------------------------------STORIES-------------------------------------------*/
+.tails{
+    margin-left: 10.5%;
+    width: 80%;
+    background: url(/images/orange_owl.svg);
+    background-position: right;
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+.story_owl{
+    width: 10vw;
+    margin-left: 8.5%;
+}
+
+#flipbook{
+
+     width: 100%!important;
+
+}
+
+#flipbook .shadow,
+#flipbook.shadow{
+  -webkit-box-shadow: 0 10px 5px 8px #666;
+  -moz-box-shadow: 0 10px 5px 8px #666;
+  -ms-box-shadow: 0 10px 5px 8px #666;
+  -o-box-shadow: 0 10px 5px 8px #666;
+  box-shadow: 0 10px 5px 8px #666;
+}
+.hard{
+    background-color: rgb(211, 207, 195);
+}
+.click_here{
+    box-shadow: 2px 2px 2px 2px black;
+    width: 30%;
+    margin-left: 70%;
+    margin-top: 10%;
+}
+
+.title_name{
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    
+}
+
+.title_image{
+    width: 80%;
+    height: auto;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.book_title{
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+
+}
+.book_about{
+text-align: center;
+
+}
+.style_frame{
+    margin: 2vw 3vw;
+    border-left: 5px rgb(253, 253, 253) solid;
+    border-bottom: 5px rgb(255, 255, 255) solid;
+    border-radius: 25%;
+    padding: 5vw 1vw;
+}
+
+.flip_image{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+
+}
+.left_page{
+    background-color: rgb(84, 138, 199);
+    color: white;
+
+}
+
+.left_page h2{
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.5vw;
+}
+.flip_name{
+    font-size: 2.5vw!important;
+    font-weight: 500!important;
+}
+.right_page{
+    background-color:seashell;
+    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, rgb(121, 240, 210)), color-stop(1, rgb(45, 78, 116)));
+    background-image:-webkit-linear-gradient(right, #FFF 95%, rgb(45, 78, 116) 100%);
+    background-image:-moz-linear-gradient(right, #FFF 95%, rgb(45, 78, 116) 100%);
+    background-image:-ms-linear-gradient(right, rgb(138, 218, 178) 95%, rgb(45, 78, 116) 100%);
+    background-image:-o-linear-gradient(right, #FFF 95%, rgb(45, 78, 116) 100%);
+    background-image:linear-gradient(right, #FFF 95%, rgb(45, 78, 116) 100%);
+    overflow-y: scroll;
+}
+.story{
+    padding: 5% 10%;
+    font-weight: unset;
+}
+.story_title{
+    margin-top: 3.5%;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+.flip_info{
+    text-align: center;
+    margin: auto;
+}
+
+.flip_image{
+    width:50%;
+    margin-left: 30%;
+    margin-top: 10%;
+    border-radius: 50% 25%;
+
+}
+
+
+/* -----------------------------------YOUTUBE VIDEOS--------------------------- */
+
+.youtube_videos{
+    width: 100%;
+    height: 400px;
+    display:inline-flex;
+    background-color: gainsboro;
+}
+.youtube_videos iframe{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.video_1,.video_3{
+    width: 25%;
+
+    padding: 8% 1.5% 8% 1.5%;
+}
+.video_2{
+    width: 50%;
+    padding: 3%;
+
+}
+footer{
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    background-color: rgb(126, 120, 163);
+}
+.home_part,.logo_part,.contact_part{
+    width: 33.33%;
+    padding-left: 2%;
+    padding-top: 5%;
+    text-align: center;
+}
+.home_part h3,.contact_part h3{
+    font-size: 1.5vw;
+    color: #fff;
+}
+.home_part a,.contact_part a{
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+
+
+/* -------------FOR details of sentence----------------- */
+.details_back{
+    margin-left: 8%;
+    background-color: #1E88E5;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 1% 2%;
+    z-index: 500!important;
+}
+.details_container{
+    margin-top: 2%;
+    margin-left: 8%;
+    width: 90%;
+    border: 2px solid black;
+    display: flex;
+}
+.details_user_info{
+    width: 290px;
+    padding: 10px;
+    height: auto;
+}
+.deatails_picture{
+    margin: auto;
+    background: url(/images/pic_frame.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.details_pic{
+    width:250px;
+    height: 300px;
+    padding: 10px 10px;
+}
+.details_info{
+    color: #666;
+    text-align: center;
+}
+.details_comp_text{
+    height: auto;
+
+
+}
+.details_date{
+    color: cadetblue;
+    margin-left: 5%;
+    padding-top: 10px;
+}
+.details_text_area{
+    overflow-y: scroll;
+    padding: 5%;
+}
